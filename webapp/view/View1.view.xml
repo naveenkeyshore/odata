@@ -1,0 +1,27 @@
+<mvc:View controllerName="Dev.odata.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Button id="but1" text ="get Data" press="onPress"></Button>
+        <Table id="idtable" items="{/Sales_by_Categories}">
+            <columns>
+            <Column>
+            <Label text="CategoryID"/>
+            </Column>
+            <Column>
+            <Label text="Confirmed"/>
+            </Column>
+            </columns>
+            <items>
+            <ColumnListItem>
+            <cells>
+            <Text text="{CategoryID}"></Text>
+            <Text text="{CategoryName}"></Text>
+            </cells>
+            </ColumnListItem>
+            </items>
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
